@@ -100,13 +100,13 @@ public class Game {
     public void PaperRockplaygame()
     {
         Scanner scanner=new Scanner(System.in) ;
-        System.out.println("welcome to  rock, paper, scissors\"");
+        System.out.println("welcome to  rock, paper, scissors");
 
 
-        System.out.println("Please enter the first player name:");
+        System.out.println("Please enter your name player 1:");
 
         player1.setName(scanner.next());
-        System.out.println("Please enter the second player name:");
+        System.out.println("Please enter your name player 2:");
         player2.setName(scanner.next());
         int winner1=0;
         int winner2=0;
@@ -114,39 +114,41 @@ public class Game {
             while(playgame) {
 
 
-                    System.out.println("can the first player choose rock or paper or scissors");
+                    System.out.println("can the first player choose Rock or Paper or Scissor");
                     String choice1=player1.Setchoice(scanner.next());
-                    System.out.println("can the second player choose rock or paper or scissors");
+                    System.out.println("can the second player choose Rock or Paper or Scissor");
                     String choice2=player2.Setchoice(scanner.next());
+                    System.out.println(player1.getName()+" choose "+ choice1);
+                    System.out.println(player2.getName()+" choose "+ choice2);
                     if (choice1.equals(choice2)) {
 
                         System.out.println("no winner");
                     }else if (choice1.equals("Rock")&& choice2.equals("Paper"))
                     {
-                        System.out.println(player2.getName()+"is the winner");
+                        System.out.println(player2.getName()+" is the winner");
                         winner2++;
 
                     }else if (choice1.equals("Paper")&& choice2.equals("Rock"))
                     {
-                        System.out.println(player1.getName()+"is the winner");
+                        System.out.println(player1.getName()+" is the winner");
                         winner1++;
 
                     }else if (choice1.equals("Scissor")&& choice2.equals("Rock"))
                     {
-                        System.out.println(player2.getName()+"is the winner");
+                        System.out.println(player2.getName()+" is the winner");
                         winner2++;
                     }
                     else if (choice1.equals("Rock")&& choice2.equals("Scissor"))
                     {
-                        System.out.println(player1.getName()+"is the winner");
+                        System.out.println(player1.getName()+" is the winner");
                         winner1++;
                     }else if (choice1.equals("Scissor")&& choice2.equals("Paper"))
                     {
-                        System.out.println(player1.getName()+"is the winner");
+                        System.out.println(player1.getName()+" is the winner");
                         winner1++;
                     } else if (choice2.equals("Scissor")&& choice1.equals("Paper"))
                     {
-                        System.out.println(player2.getName()+"is the winner");
+                        System.out.println(player2.getName()+" is the winner");
                         winner2++;
                     }
                     else
